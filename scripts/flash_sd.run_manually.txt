@@ -1,0 +1,11 @@
+sudo service klipper stop
+make clean
+make menuconfig
+make
+
+#./scripts/flash-sdcard.sh /dev/serial/by-id/usb-Klipper_lpc1768_0AF00017881C4AAFD0C8685DC22000F5-if00 btt-skr-v1.4
+#./scripts/flash-sdcard.sh /dev/serial/by-id/usb-Klipper_lpc1768_1AF0FF0D48104AAF9AA2675DC12000F5-if00 btt-skr-v1.4
+
+./scripts/flash-sdcard.sh /dev/serial/by-id/usb-Klipper_lpc1768_1950000E610039AF0D02F55BC72000F5-if0 btt-skr-v1.30
+
+sudo service klipper start
