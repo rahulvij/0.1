@@ -12,7 +12,7 @@ cors_domains =
 	*.lan
 	*://app.fluidd.xyz
 trusted_clients = 
-	10.0.0.0/16
+	10.0.0.0/24
 	voron0.local
 	FE80::/10
 	::1/128
@@ -28,4 +28,11 @@ enable_auto_refresh = True
 type = web
 repo = cadriel/fluidd
 path = ~/fluidd
+
+[update_manager virtual_leds]
+type = git_repo
+path = ~/klipper-virtual_leds
+origin = https://github.com/MapleLeafMakers/klipper-virtual_leds.git
+is_system_service = False
+primary_branch = main
 
